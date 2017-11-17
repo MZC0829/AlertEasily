@@ -1,0 +1,33 @@
+//
+//  FuncHelper.swift
+//  AlertEasily
+//
+//  Created by 麦志超 on 2017/11/17.
+//  Copyright © 2017年 MZC. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+func showAlert(title: String?, message: String? = nil, preferredStyle: UIAlertControllerStyle = .alert, defaultHandler: (() ->Void)? = nil, cancelHandler: (() -> Void)? = nil)
+{
+    let alert = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
+    
+    let defaultAction = UIAlertAction(title: "OK", style: .default) { (alert) in
+        defaultHandler!()
+    }
+    alert.addAction(defaultAction)
+    
+    if cancelHandler != nil
+    {
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (alert) in
+            cancelHandler!()
+        }
+        alert.addAction(cancelAction)
+    }
+    
+    // 获取当前显示的 ViewController
+    let theViewControllerYouSee = UIViewController.currentViewController()
+    
+    theViewControllerYouSee?.present(alert, animated: true, completion: nil)
+}
