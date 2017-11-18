@@ -1,7 +1,9 @@
 # AlertEasily
-Easy to show UIAlertController, written in Swift.
+##### Easy to show UIAlertController, written in Swift.
 
 ---
+
+
 ## Cocoapods
 
 ### 1. Add the following line to your Podfile:
@@ -22,8 +24,8 @@ end
 
 ```
 $ pod install
-
 ```
+
 
 
 
@@ -31,6 +33,7 @@ $ pod install
 >
 - iOS 8.0+
 - swift 3+ and swift 4
+
 
 
 ## Usage
