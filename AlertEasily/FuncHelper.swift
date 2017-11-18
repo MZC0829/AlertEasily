@@ -6,7 +6,7 @@
 //  Copyright © 2017年 MZC. All rights reserved.
 //
 
-import Foundation
+
 import UIKit
 
 func showAlert(title: String?, message: String? = nil, preferredStyle: UIAlertControllerStyle = .alert, defaultHandler: (() ->Void)? = nil, cancelHandler: (() -> Void)? = nil)
