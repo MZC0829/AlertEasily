@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
                      Easy to display UIAlertController.
                    DESC
   s.homepage     = "https://github.com/MZC0829/AlertEasily"
-  s.license      = "MIT"
+  s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "maizhichao" => "1005756105@qq.com" }
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/MZC0829/AlertEasily.git", :tag => s.version }
