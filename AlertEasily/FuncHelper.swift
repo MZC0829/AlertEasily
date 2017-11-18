@@ -9,7 +9,7 @@
 
 import UIKit
 
-func showAlert(title: String?, message: String? = nil, preferredStyle: UIAlertControllerStyle = .alert, defaultHandler: (() ->Void)? = nil, cancelHandler: (() -> Void)? = nil)
+public func showAlert(title: String?, message: String? = nil, preferredStyle: UIAlertControllerStyle = .alert, defaultHandler: (() ->Void)? = nil, cancelHandler: (() -> Void)? = nil)
 {
     let alert = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
     

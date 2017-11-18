@@ -10,7 +10,7 @@
 import UIKit
 
 
-extension UIViewController
+public extension UIViewController
 {
     // 获取当前显示的 ViewController
     class func currentViewController(base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController?
