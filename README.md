@@ -44,6 +44,16 @@ $ pod install
 ```
 showAlert(title: "This is AlertEasily")
 ```
+
+### - or
+```
+showAlert(title: "AlertEasily", message: "This is AlertEasily", preferredStyle: .alert, defaultHandler: {
+            
+            print("clicked default action")
+            
+        }, cancelHandler: nil)
+```
+
 ### - or
 ```
 showAlert(title: "AlertEasily", message: "This is AlertEasily", preferredStyle: .alert, defaultHandler: {
