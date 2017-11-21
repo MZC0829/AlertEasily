@@ -9,12 +9,24 @@
 
 import UIKit
 
+// MARK: - Show AlertController
+///
+/// - Parameters:
+///   - title: title
+///   - message: message
+///   - preferredStyle: UIAlertControllerStyle, default: .alert
+///   - defaultHandler: defaultHandler, default: nil
+///   - cancelHandler: cancelHandler, default: nil
 public func showAlert(title: String?, message: String? = nil, preferredStyle: UIAlertControllerStyle = .alert, defaultHandler: (() ->Void)? = nil, cancelHandler: (() -> Void)? = nil)
 {
     let alert = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
     
     let defaultAction = UIAlertAction(title: "OK", style: .default) { (alert) in
-        defaultHandler!()
+        
+        if defaultHandler != nil
+        {
+            defaultHandler!()
+        }
     }
     alert.addAction(defaultAction)
     
@@ -26,8 +38,9 @@ public func showAlert(title: String?, message: String? = nil, preferredStyle: UI
         alert.addAction(cancelAction)
     }
     
-    // 获取当前显示的 ViewController
+    /// 获取当前显示的 ViewController
     let theViewControllerYouSee = UIViewController.currentViewController()
     
     theViewControllerYouSee?.present(alert, animated: true, completion: nil)
 }
+
