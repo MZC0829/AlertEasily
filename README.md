@@ -15,7 +15,7 @@ target 'YourIosApps' do
 
   use_frameworks!
 
-  pod 'AlertEasily', '~> 0.0.2'
+  pod 'AlertEasily', '~> 0.0.3'
 
 end
 ```
