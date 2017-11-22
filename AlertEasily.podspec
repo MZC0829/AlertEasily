@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "AlertEasily"
-  s.version      = "0.0.3"
+  s.version      = "1.0.0"
   s.summary      = "Easy to show UIAlertController."
   s.description  = "Easy to display UIAlertController."
   s.homepage     = "https://github.com/MZC0829/AlertEasily"
