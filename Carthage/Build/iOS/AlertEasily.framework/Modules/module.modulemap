@@ -1,0 +1,4 @@
+framework module AlertEasily {
+    header "AlertEasily-Swift.h"
+    requires objc
+}
