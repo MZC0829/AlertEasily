@@ -17,7 +17,7 @@ import UIKit
 ///   - preferredStyle: UIAlertControllerStyle, default: .alert
 ///   - defaultHandler: defaultHandler, default: nil
 ///   - cancelHandler: cancelHandler, default: nil
-public func showAlert(title: String?, message: String? = nil, preferredStyle: UIAlertControllerStyle = .alert, defaultHandler: (() ->Void)? = nil, cancelHandler: (() -> Void)? = nil)
+public func showAlert(title: String, message: String? = nil, preferredStyle: UIAlertControllerStyle = .alert, defaultHandler: (() ->Void)? = nil, cancelHandler: (() -> Void)? = nil)
 {
     let alert = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
     
