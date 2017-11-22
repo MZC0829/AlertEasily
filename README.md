@@ -15,7 +15,7 @@ target 'YourIosApps' do
 
   use_frameworks!
 
-  pod 'AlertEasily', '~> 0.0.3'
+  pod 'AlertEasily', '~> 1.0.0'
 
 end
 ```
@@ -26,6 +26,25 @@ end
 $ pod install
 ```
 
+
+## Carthage
+
+### 1、run the following command:
+```
+$ touch Cartfile
+```
+
+### 2、Add the following line to your Cartfile:
+
+```
+github "MZC0829/AlertEasily"
+```
+
+### 3、run the following command:
+
+```
+$ carthage update
+```
 
 
 
