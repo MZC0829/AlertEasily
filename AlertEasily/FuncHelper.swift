@@ -17,11 +17,11 @@ import UIKit
 ///   - preferredStyle: UIAlertControllerStyle, default: .alert
 ///   - defaultHandler: defaultHandler, default: nil
 ///   - cancelHandler: cancelHandler, default: nil
-public func showAlert(title: String, message: String? = nil, preferredStyle: UIAlertControllerStyle = .alert, defaultHandler: (() ->Void)? = nil, cancelHandler: (() -> Void)? = nil)
+public func showAlert(title: String, message: String? = nil, preferredStyle: UIAlertControllerStyle = .alert, defaultActionTitle: String? = "好的", cancelActionTitle: String? = "取消", defaultHandler: (() ->Void)? = nil, cancelHandler: (() -> Void)? = nil)
 {
     let alert = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
     
-    let defaultAction = UIAlertAction(title: "OK", style: .default) { (alert) in
+    let defaultAction = UIAlertAction(title: defaultActionTitle, style: .default) { (alert) in
         
         if defaultHandler != nil
         {
@@ -32,7 +32,7 @@ public func showAlert(title: String, message: String? = nil, preferredStyle: UIA
     
     if cancelHandler != nil
     {
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (alert) in
+        let cancelAction = UIAlertAction(title: cancelActionTitle, style: .cancel) { (alert) in
             cancelHandler!()
         }
         alert.addAction(cancelAction)
